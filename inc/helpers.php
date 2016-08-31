@@ -17,7 +17,7 @@ function remove_ptags_on_images($content){
 // Custom excerpt more
 function custom_excerpt_more($more) {
 	global $post;
-	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'wpstartertheme' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'wpstartertheme' ) .'</a>';
+	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'wordpress-starter-theme' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'wordpress-starter-theme' ) .'</a>';
 }
 
 ?>

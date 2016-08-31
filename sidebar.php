@@ -1,7 +1,7 @@
 <?php
 /**
  * The sidebar containing the main widget area.
- * @package _wpstartertheme
+ * @package _wordpress-starter-theme
  */
 
 if ( is_active_sidebar( 'main-sidebar' ) ) {

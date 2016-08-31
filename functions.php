@@ -32,7 +32,7 @@ if ( ! isset( $content_width ) ) {
  Menu
 *************************************/
 register_nav_menus(array(
-	'main-nav' => __( 'The Main Menu', 'wpstartertheme' ),
+	'main-nav' => __( 'The Main Menu', 'wordpress-starter-theme' ),
 ));
 
 
@@ -44,8 +44,8 @@ register_nav_menus(array(
 function theme_sidebars() {
 	register_sidebar(array(
 		'id' => 'main-sidebar',
-		'name' => __( 'Main sidebar', 'wpstartertheme' ),
-		'description' => __( 'The main sidebar', 'wpstartertheme' ),
+		'name' => __( 'Main sidebar', 'wordpress-starter-theme' ),
+		'description' => __( 'The main sidebar', 'wordpress-starter-theme' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
         'before_title' => '<div class="widgettitle">',
@@ -78,7 +78,7 @@ if ( ! is_admin() ) {
 function js_async_attr($tag){
 
 # Do not add async to these scripts
-$scripts_to_exclude = array('jquery.min.js');
+$scripts_to_exclude = array('jquery.js');
 
 foreach($scripts_to_exclude as $exclude_script){
 	if(true == strpos($tag, $exclude_script ) )
@@ -95,7 +95,7 @@ add_filter( 'script_loader_tag', 'js_async_attr', 10 );
 *************************************/
 
 function load_styles() {
-wp_enqueue_style( 'wpstartertheme-css', get_stylesheet_uri() );
+wp_enqueue_style( 'wordpress-starter-theme-css', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'load_styles');
 
@@ -104,6 +104,8 @@ add_action( 'wp_enqueue_scripts', 'load_styles');
 function load_scripts() {
 
     wp_enqueue_script( 'jquery' );
+		wp_register_script( 'global-js', get_stylesheet_directory_uri() . '/inc/js/global.js', '1.0.0', array('jquery'), true);
+		wp_enqueue_script( 'global-js');
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -119,13 +121,13 @@ add_action( 'wp_enqueue_scripts', 'load_scripts', 20, 1);
 
 
 register_sidebar( array(
-		'name'          => __( 'Footer Widget 1', 'speakwp' ),
+		'name'          => __( 'Footer Widget 1', 'wordpress-starter-theme' ),
 		'id'            => 'footer-widget-1',
 		'before_widget' => '',
 		'after_widget' => ''
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer Widget 2', 'speakwp' ),
+		'name'          => __( 'Footer Widget 2', 'wordpress-starter-theme' ),
 		'id'            => 'footer-widget-2',
 		'before_widget' => '',
 		'after_widget' => ''

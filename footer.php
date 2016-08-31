@@ -16,13 +16,11 @@
                 <div class="absolute-footer">
 	                            <div class="container">
 
-                    <p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?> </p>
-                    <p>A <a href="https://www.designsbytouch.co.uk">Studio Touch</a> project.
+                    <p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?> A <a href="https://www.designsbytouch.co.uk">Studio Touch</a> project.</p>
                 </div>
                 </div>
 
 		</div>
 		<?php wp_footer(); ?>
-		<script type="text/javascript">jQuery(document).ready(function(n){n(".js-menu-toggle").on("click",function(){n("body").toggleClass("is-menu-on")})});</script>
 	</body>
 </html>

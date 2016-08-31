@@ -37,7 +37,7 @@ gulp.task('sass', function() {
 // Initiate BrowserSync. Check for CSS changes and reload. Don't forget to change the proxy to the correct domain!
 gulp.task('browser-sync', function (cb) {
 browserSync.init({
-		proxy: "www.wpstartertheme.io"
+		proxy: "www.wordpress-starter-theme.io"
     }, function() {
 			gulp.watch('style.css').on('change', function () {
             gulp.src('style.css')

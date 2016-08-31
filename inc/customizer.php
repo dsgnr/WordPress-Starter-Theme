@@ -19,7 +19,7 @@ function theme_customize_register( $wp_customize ) {
 
     // Section definitions
     $wp_customize->add_section( 'cta_section' , array(
-        'title'      => __( 'CTA buttons', 'wpstartertheme' ),
+        'title'      => __( 'CTA buttons', 'wordpress-starter-theme' ),
         'priority'   => 30,
     ) );
 
@@ -27,7 +27,7 @@ function theme_customize_register( $wp_customize ) {
     $wp_customize->add_control(
     	'primary_cta_link_control',
     	array(
-    		'label'    => __( 'Primary CTA Link', 'wpstartertheme' ),
+    		'label'    => __( 'Primary CTA Link', 'wordpress-starter-theme' ),
     		'section'  => 'cta_section',
     		'settings' => 'primary_cta_link'
     	)
@@ -37,7 +37,7 @@ function theme_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'secondary_cta_link_control',
         array(
-            'label'    => __( 'Secondary CTA Link', 'wpstartertheme' ),
+            'label'    => __( 'Secondary CTA Link', 'wordpress-starter-theme' ),
             'section'  => 'cta_section',
             'settings' => 'secondary_cta_link'
         )
