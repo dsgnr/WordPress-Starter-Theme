@@ -1,0 +1,44 @@
+//*******************************************************
+// CONFIG FILE
+// Here we set the variables used throughout the project
+//*******************************************************
+// Palette : http://www.colourlovers.com/palette/50272/Happy_freshness
+
+
+//-------------------
+//  Colors
+//-------------------
+$main-color:        #8d81ac;
+
+// Light variations
+$white:             #FFFFFF;
+$light-gray:        #f5f5f5;
+$gray:              #aebdc1;
+$dark-gray:         #393d40;
+
+// Dark variations
+$black:             #111111;
+$text-color:        #848e97;
+
+
+
+//-------------------
+//  Font config
+//-------------------
+$primary-font: 'Montserrat', sans-serif;
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url(inc/fonts/montserrat-regular.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat-Bold'), url(inc/fonts/montserrat-bold.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}

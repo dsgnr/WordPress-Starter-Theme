@@ -1,0 +1,40 @@
+/*!
+Theme Name: Wordpress Starter Theme
+Theme URI: htts://framework.touchthemes.co.uk
+Author: Studio Touch (Daniel Hand)
+Author URI: https://www.designsbytouch.co.uk
+Description: WordPress starter theme
+Version: 1.0.0
+Text Domain: wpstartertheme
+*/
+
+//---------------------
+// IMPORTING BASE
+//---------------------
+@import "base/_config";
+@import "base/_utils";
+@import "base/_normalize";
+@import "base/_typography";
+
+
+//---------------------
+// IMPORTING Layout
+//---------------------
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_sections";
+@import "layout/_grid";
+
+
+//-----------------------
+// IMPORTING MODULES
+//-----------------------
+@import "modules/_accessibility";
+@import "modules/_burger_btn";
+@import "modules/_widgets";
+@import "modules/_buttons";
+@import "modules/_pagination";
+@import "modules/_post";
+@import "modules/_comments";
+@import "modules/_forms";
+@import "modules/_custom";

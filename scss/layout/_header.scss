@@ -1,0 +1,167 @@
+/*----------------------
+   Setup
+-----------------------*/
+$header-height: 60px;
+$logo-height: 40px;
+$break-point: 768px;
+$margin-logo: ($header-height - $logo-height)/2;
+
+
+/*----------------------
+   Header wrapper
+-----------------------*/
+.header {
+    background-color: $white;
+    border-bottom: 1px solid $light-gray;
+	display: table;
+    margin: 0 auto;
+    width:100%;
+}
+
+.title-area { float:left;
+	h1 {     font-size: 1.1em;
+    padding: 1.5em 0;
+    margin: 0px;}
+}
+/*----------------------
+   Logo
+-----------------------*/
+.site-logo img {
+    float: left;
+    display: block;
+    width: auto;
+    height: $logo-height;
+    margin: $margin-logo 0;
+}
+
+
+
+/*-----------------------
+    Mobile menu layout
+-------------------------*/
+.site-nav {
+    @include unvisible();
+
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    transition: all .2s ease-in-out;
+
+    background: white;
+    .no-js &,
+    .is-menu-on & {
+        @include visible();
+    }
+}
+
+
+
+/*----------------------
+    Mobile menu style
+-----------------------*/
+.site-nav {
+    ul {
+            list-style: none;
+    margin: 10px 0px 0px 0px !important;
+    padding:0px !important;
+    display: inline-block;
+    }
+    li > a {
+        color: $gray;
+        font-weight: bold;
+        display: block;
+        padding: 0.75em;
+        white-space: nowrap;
+        &:hover {
+            text-decoration: none;
+            color: $main-color;
+        }
+    }
+}
+
+
+/*-----------------------------
+   Navigation mobile layout
+------------------------------*/
+@media only screen and (max-width: 768px) {
+
+    .site-nav {
+margin-top:60px;       
+        width: 100%;
+    }
+}
+
+/*-----------------------------
+   Navigation desktop layout
+------------------------------*/
+@media only screen and (min-width: $break-point) {
+    .menu-icon {
+        display: none;
+    }
+    .site-nav {
+        @include visible();
+        position: static;
+        width: auto;
+        float: right;
+    }
+}
+
+
+
+/*---------------------------
+   Navigation desktop style
+----------------------------*/
+@media only screen and (min-width: $break-point) {
+    .site-nav {
+        ul {
+            margin-top: 0;
+        }
+        li {
+            float: left;
+            position: relative;
+        }
+        li a {
+            padding: 1.5em;
+        }
+        li.current-menu-item > a,
+        li.current_page_item > a,
+        li.current_page_ancestor > a,
+        .current-menu-ancestor > a {
+            color: $main-color;
+        }
+    }
+}
+
+
+/*----------------------
+   Sub menu
+-----------------------*/
+@media only screen and (min-width: $break-point) {
+    .site-nav .sub-menu {
+        z-index: 100;
+        position: absolute;
+        right: 0;
+        padding: 0;
+        background: $light-gray;
+    }
+}
+
+
+/*----------------------
+   Sub menu
+-----------------------*/
+@media only screen and (min-width: $break-point) {
+
+    .site-nav .menu-item-has-children {
+        .sub-menu {
+            @include unvisible();
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover .sub-menu {
+            @include visible();
+        }
+    }
+}

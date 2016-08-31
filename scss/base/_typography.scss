@@ -1,0 +1,56 @@
+//*******************************************************
+// TYPOGRAPHY FILE
+// Here is the global typography styles
+//*******************************************************
+
+
+/*-----------------------
+     Setting up
+------------------------*/
+$modular-scale-base: 1rem;
+
+body {
+	font-family: $primary-font;
+	font-size: 100%;
+	line-height: 1.6;
+	font-size:15px;
+	color: $text-color;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/*-----------------------
+    General styles
+------------------------*/
+body{ font-size: modular-scale(0); }
+  h4{ font-size: modular-scale(1); }
+  h3{ font-size: modular-scale(1); }
+  h2{ font-size: modular-scale(2); }
+  h1{ font-size: modular-scale(3); }
+  small, .font_small {font-size: modular-scale(-1);}
+  ul {padding: 0 0 1.75em 1.25em}
+
+h1, h2, h3, h4{
+	color: $main-color;
+	font-weight: 400;
+}
+
+
+
+/*-----------------------
+    Link Styles
+------------------------*/
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+	color: $main-color;
+	text-decoration: none;
+	outline: 0;
+}
+a:hover {
+	color: shade($main-color, 70%);
+}

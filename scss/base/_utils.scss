@@ -1,0 +1,26 @@
+//************************************************************
+// UTILS FILE
+// Here we put the placeholders, helpers, mixins & functions
+//************************************************************
+
+//-----------------------
+// Mixins
+//-----------------------
+@mixin visible() {
+    visibility: visible;
+    opacity: 1;
+}
+@mixin unvisible() {
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+//-----------------------
+// Helpers
+//-----------------------
+
+
+.text-center{
+    text-align: center;
+}
