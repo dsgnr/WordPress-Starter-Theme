@@ -7,7 +7,7 @@ if ( post_password_required() ) { return; }
 <?php if ( have_comments() ) : ?>
 
     <h3 id="comments-title">
-        <?php comments_number( __( '<span>No</span> Comments', 'wordpress-starter-theme' ), __( '<span>One</span> Comment', 'wordpress-starter-theme' ), __( '<span>%</span> Comments', 'wordpress-starter-theme' ) );?>
+        <?php comments_number( __( '<span>No</span> Comments', 'designsbytouch' ), __( '<span>One</span> Comment', 'designsbytouch' ), __( '<span>%</span> Comments', 'designsbytouch' ) );?>
     </h3>
 
     <section class="commentlist">
@@ -21,7 +21,7 @@ if ( post_password_required() ) { return; }
 
         <?php if ( ! comments_open() ) : ?>
             <p class="no-comments">
-                <?php _e( 'Comments are closed.' , 'wordpress-starter-theme' ); ?>
+                <?php _e( 'Comments are closed.' , 'designsbytouch' ); ?>
             </p>
         <?php endif; ?>
     </section>

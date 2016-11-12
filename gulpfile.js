@@ -29,7 +29,7 @@ var autoprefixerOptions = {
 gulp.task('sass', function() {
     return gulp.src('scss/*.scss')
         .pipe(sass())
-		.pipe(autoprefixer(autoprefixerOptions))
+//		.pipe(autoprefixer(autoprefixerOptions))
         .pipe(gulp.dest('./'));
 });
 
@@ -37,7 +37,7 @@ gulp.task('sass', function() {
 // Initiate BrowserSync. Check for CSS changes and reload. Don't forget to change the proxy to the correct domain!
 gulp.task('browser-sync', function (cb) {
 browserSync.init({
-		proxy: "www.wordpress-starter-theme.io"
+		proxy: "www.designsbytouch.local"
     }, function() {
 			gulp.watch('style.css').on('change', function () {
             gulp.src('style.css')

@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 
 /*********************
@@ -32,7 +32,7 @@ if ( ! isset( $content_width ) ) {
  Menu
 *************************************/
 register_nav_menus(array(
-	'main-nav' => __( 'The Main Menu', 'wordpress-starter-theme' ),
+	'main-nav' => __( 'The Main Menu', 'designsbytouch' ),
 ));
 
 
@@ -44,8 +44,8 @@ register_nav_menus(array(
 function theme_sidebars() {
 	register_sidebar(array(
 		'id' => 'main-sidebar',
-		'name' => __( 'Main sidebar', 'wordpress-starter-theme' ),
-		'description' => __( 'The main sidebar', 'wordpress-starter-theme' ),
+		'name' => __( 'Main sidebar', 'designsbytouch' ),
+		'description' => __( 'The main sidebar', 'designsbytouch' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
         'before_title' => '<div class="widgettitle">',
@@ -95,7 +95,7 @@ add_filter( 'script_loader_tag', 'js_async_attr', 10 );
 *************************************/
 
 function load_styles() {
-wp_enqueue_style( 'wordpress-starter-theme-css', get_stylesheet_uri() );
+wp_enqueue_style( 'designsbytouch-css', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'load_styles');
 
@@ -121,13 +121,13 @@ add_action( 'wp_enqueue_scripts', 'load_scripts', 20, 1);
 
 
 register_sidebar( array(
-		'name'          => __( 'Footer Widget 1', 'wordpress-starter-theme' ),
+		'name'          => __( 'Footer Widget 1', 'designsbytouch' ),
 		'id'            => 'footer-widget-1',
 		'before_widget' => '',
 		'after_widget' => ''
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer Widget 2', 'wordpress-starter-theme' ),
+		'name'          => __( 'Footer Widget 2', 'designsbytouch' ),
 		'id'            => 'footer-widget-2',
 		'before_widget' => '',
 		'after_widget' => ''
