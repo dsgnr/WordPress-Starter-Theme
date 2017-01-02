@@ -73,23 +73,7 @@ function theme_filters(){
     add_filter( 'the_content', 'remove_ptags_on_images' );
     add_filter( 'excerpt_more', 'custom_excerpt_more' );
 }
-if ( ! is_admin() ) {
-/*function to add async to all scripts*/
-function js_async_attr($tag){
 
-# Do not add async to these scripts
-$scripts_to_exclude = array('jquery.js');
-
-foreach($scripts_to_exclude as $exclude_script){
-	if(true == strpos($tag, $exclude_script ) )
-	return $tag;
-}
-
-# Add async to all remaining scripts
-return str_replace( ' src', ' async="async" src', $tag );
-}
-add_filter( 'script_loader_tag', 'js_async_attr', 10 );
-}
 /************************************
  Assets
 *************************************/
